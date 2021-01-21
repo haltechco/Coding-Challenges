@@ -1,2 +1,3 @@
-# Coding-Challenges
-0003.
+## Coding-Challenges
+
+#### Project Euler & Hacker Rank
