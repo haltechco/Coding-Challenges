@@ -20,15 +20,13 @@ four million, find the sum of the even-valued terms.
 #------------------------------------------------------------------------------#
 import math
 
-seq = []
-four_million = 4000000
-
-for i in list(range(0, four_million)):
-    if i[-1] += i[-2]
-    #
-    # Check to see if my holding value + current value = index
-        # If yes and if even append to sequence.
-    print(i)
+a, b = 1, 1
+total = 0
+while a <= 4000000:
+    if a % 2 == 0:
+        total += a
+    a, b = b, a+b  # the real formula for Fibonacci sequence
+print(total)
 
 
 
