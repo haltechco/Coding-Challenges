@@ -25,22 +25,18 @@ import sys
 
 def countingValleys(steps, path):
     # Write your code here
-    valleys_walked = 0
-    mountain = 0
-    valley = 0
+    up, down, valleys_walked = 0, 0, 0
 
-    for i in path:
-        last_step = i[-1]
+    for step in path:
+        if step == 'D': down += 1
 
-        if i == 'U' and :
-            valley += 1
-        else:
-            mountain += 1
-
-    #print(f'{valley} ++++ {mountain}')
+        if down == 2:
+            valleys_walked += 1
+            down = 0
 
     return valleys_walked
 
-x = countingValleys(8, ['UDDDUDUU'])
+
+x = countingValleys(4, 'DUDUDD')
 
 print(x)
