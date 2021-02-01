@@ -3,19 +3,21 @@
 def jumpingOnClouds(c):
     min_steps = i = 0
     if c[0] == 1: return min_steps # One Cloud.
-    while i < (c[0]-1):
-        if c[1][i+2] == 0:
-            min_steps += 1
-            i += 2
-        else:
-            min_steps += 1
-            i +=1
-
+    while i < c[0]: # Stepping through all clouds.
+        try: # Handlin out of range exception.
+            if c[1][i+2] == 0: # Looking forward two steps.
+                min_steps += 1
+                i += 2
+            else: # Knowing we can only move one step.
+                min_steps += 1
+                i +=1
+        except:
+            return min_steps
     return min_steps
 
 
-num_clouds = 3
-describing_clouds = [0,1,1]
+num_clouds = 6
+describing_clouds = [0,0,0,1,0,0]
 c = [num_clouds, describing_clouds]
 
 print(jumpingOnClouds(c))
