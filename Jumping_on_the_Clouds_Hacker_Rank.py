@@ -11,7 +11,8 @@ def jumpingOnClouds(c):
             else: # Knowing we can only move one step.
                 min_steps += 1
                 i +=1
-        except:
+        except: # Because we known we've moved out of the index.
+            if c[1][i+1] == 0: min_steps += 1
             return min_steps
     return min_steps
 
