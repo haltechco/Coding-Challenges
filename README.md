@@ -1,5 +1,7 @@
-## Coding-Challenges
+## Coding-Challenges: Project Euler & Hacker Rank
 
-#### Project Euler & Hacker Rank
+#### Overview
 
-> By Harry Akeroyd.
+_
+
+###### By Harry Akeroyd. eightyeightone@outlook.com
