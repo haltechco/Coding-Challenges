@@ -5,12 +5,6 @@ people in the line.
 Conditions:
     A person can only bribe and move forward.
     A person holds their number, i.e. q = [1,2,3], q = [1,3,2], 3 bribed 2.
-
-Inputs:
-    First line contains the number of test cases.
-    Next two lines is;
-        The number of people in the cue.
-        List describing the final state of the que.
 '''
 import math
 
@@ -20,7 +14,7 @@ def minimum_bribes(q):
     bribes_recv = 0
 
     # If Person P had to bribe more than 2 people, the line is too chaotic.
-    too_chaotic = 'Too Chaotic'
+    too_chaotic = 'Too chaotic'
 
     # Re-index.
     Q = [person-1 for person in q]
@@ -34,7 +28,7 @@ def minimum_bribes(q):
             print(too_chaotic)
             print(f'{current}# has moved to position {initial}#: {current-initial} bribes taken.')
             return
-        elif current-initial <0:
+        elif current-initial < 0:
             # If we move one step to the 'left' we've bribed someone.
             bribes_recv += abs((current-initial))
 
@@ -43,6 +37,6 @@ def minimum_bribes(q):
 
 
 # This is the final state of the que.
-q = [1,2,5,3,7,8,6,4]
+q = [5,1,2,3,7,8,6,4]
 
 print(minimum_bribes(q))
