@@ -14,7 +14,7 @@ def minimum_bribes(q):
     bribes_recv = 0
 
     # If Person P had to bribe more than 2 people, the line is too chaotic.
-    too_chaotic = 'Too chaotic'
+    too_chaotic = "Too chaotic"
 
     # Re-index.
     Q = [person-1 for person in q]
@@ -31,12 +31,12 @@ def minimum_bribes(q):
         elif current-initial < 0:
             # If we move one step to the 'left' we've bribed someone.
             bribes_recv += abs((current-initial))
+            print(bribes_recv)
 
-    bribes_recv += 1
     return bribes_recv
 
 
 # This is the final state of the que.
-q = [5,1,2,3,7,8,6,4]
+q = [1,2,5,3,7,8,6,4]
 
 print(minimum_bribes(q))
