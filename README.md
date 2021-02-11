@@ -2,6 +2,6 @@
 
 #### Overview
 
-###### This repository seeks to showcase coding in a combination of Python3 and with future work in C++ and R. The work in C++ and R will be applied to projects in quantitative finance. Python will also be used in this research.
+###### This repository seeks to showcase coding in Python and with future work in C++ and R. The intention of learning these languages is to apply to quantitative research works.
 
 ###### By Harry Akeroyd. eightyeightone@outlook.com
