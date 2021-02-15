@@ -7,14 +7,24 @@
 # A prime number is that, that is only divisible by itself and 1.
 
 # Create a list of prime numbers, once the list reaches 10,001, end. 
-# 10,001 prime is count.prime_number[-1]
+# 10,001 prime is prime_number_list[-1]
 
-is.prime <- function(n){
+
+primes_upto <- function(limit){
+  prime_list_upto <- seq(2, limit) # List of numbers from 2 -> limit.
+  prime_nums <- c()      # To be amended with primes.
   
+  # Finds all the prime numbers up to the limit.
+  for(i in seq(2, limit)){
+    if(any(prime_list_upto == i)){ # If i is within the bounds.
+      # Amend i to prime list if it is a prime.
+      prime_list_upto = c(prime_list_upto[(prime_list_upto %% i) != 0], i)
+    }
+  }
+  return(prime_list_upto)
 }
 
-num_primes <- 0
-while(num_primes < 10001){
-  is.prime()
-  num_primes = num_primes + 1
-}
+# Inefficient: find a way to loop until the length of the data set is 10,001.
+# Therefore, we have found 10,001 primes & data_set[length(data_set)] is last value.
+data_set <- primes_upto(150000)
+cat("The 10,001st primes number is: ", data_set[10001])
