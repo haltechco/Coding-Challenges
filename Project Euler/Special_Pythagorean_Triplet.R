@@ -15,8 +15,8 @@ flag <- FALSE
 
 BFM <- function(target){
 # Brute force method. For all possibilities of a, b & c search until condition met.
-  for(a in 1:floor(999/3)){
-    for(b in 1:floor(999/2)){
+  for(a in 1:floor(999/3)){   # For a < b < c: a has to be 1/3 of sum(a,b,c)
+    for(b in 1:floor(999/2)){ # & b has to be 1/2 of sum(a,b,c)
       for(c in 1:999){
         a_sqd <- a^2
         b_sqd <- b^2
