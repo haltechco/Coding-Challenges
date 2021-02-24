@@ -14,7 +14,7 @@
   
 #  NOTE: Once the chain starts the terms are allowed to go above one million.
 time.start <- Sys.time()
-
+library(gmp)
 
 ###############################################################################
 func.collatz_chain <- function(n){
